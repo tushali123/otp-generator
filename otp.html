@@ -67,7 +67,7 @@
     <script>
         window.addEventListener("load", generate);
         function generate(){
-            let otpLength=6;
+            var otpLength=6;
             var otp=Math.floor(100000 + Math.random() * 900000);
             document.getElementById('num').innerHTML=otp;
         }
