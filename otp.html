@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(3, 29, 54);
+            align-items: center;
+        }
+        .d1{
+            margin-top: 155px;
+            box-sizing: border-box;
+            width: 550px;
+            height: 350px;
+            background-color: black;
+        }
+        .d1:hover{
+            box-shadow: 1px 1px 10px 2px white;
+        }
+        .a{
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 37px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .b{
+            background-color: rgb(3, 31, 74);
+            border: none;
+            color: white;
+            font-size: 20px;
+            margin-left: 175px;
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .b:hover{
+            cursor: pointer;
+            background-color: rgb(3, 29, 54);
+        }
+        .c{
+            margin-top: 40px;
+            background-color: rgba(52, 51, 51, 0.797);
+            width: 450px;
+            margin-left: 50px;
+            height: 60px;
+            text-align: center;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 10px;
+            font-size: 25px;
+            display: flex;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", generate);
+        function generate(){
+            let otpLength=6;
+            var otp=Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('num').innerHTML=otp;
+        }
+    </script>
+</head>
+<body>
+    <div class="d1">
+        <p class="a">OTP Generator</p>
+        <button class="b" onclick="generate()">Generate OTP</button>
+        <p class="c" id="num"></p>
+    </div>
+</body>
+</html>
